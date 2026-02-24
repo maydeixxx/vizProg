@@ -41,3 +41,46 @@ describe("getStatusColor", () => {
       expect(getStatusColor("new")).toBe("blue")
     })
 })
+
+describe("String formatters", () => {
+    it("capitalizeFirst", () => {
+      expect(capitalizeFirst("typescript"))
+        .toBe("Typescript")
+    })
+  
+    it("trimAndFormat", () => {
+      expect(trimAndFormat("  hello  "))
+        .toBe("hello")
+  
+      expect(trimAndFormat("  hello  ", true))
+        .toBe("HELLO")
+    })
+})
+
+describe("getFirstElement", () => {
+    it("should return first element", () => {
+      expect(getFirstElement([1, 2, 3])).toBe(1)
+      expect(getFirstElement(["a", "b"])).toBe("a")
+    })
+  
+    it("should return undefined for empty array", () => {
+      expect(getFirstElement([])).toBeUndefined()
+    })
+})
+
+describe("findById", () => {
+    const users = [
+      { id: 1, name: "Alex" },
+      { id: 2, name: "Bob" }
+    ]
+  
+    it("should find user by id", () => {
+      expect(findById(users, 2))
+        .toEqual({ id: 2, name: "Bob" })
+    })
+  
+    it("should return undefined if not found", () => {
+      expect(findById(users, 999))
+        .toBeUndefined()
+    })
+})
