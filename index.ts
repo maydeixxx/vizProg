@@ -22,9 +22,6 @@ function createUser(
 const user1 = createUser(1, "Alex", "alex@mail.com")
 const user2 = createUser(2, "Bob")
 
-console.log("user1: " + user1);
-console.log("user2: " + user2);
-
 type Genre = 'fiction' | 'non-fiction'
 
 interface Book {
@@ -51,10 +48,6 @@ const book2 = createBook({
   genre: 'non-fiction'
 })
 
-
-console.log("book1: " + book1);
-console.log("book2: " + book2);
-
 function calculateArea(shape: 'circle', radius: number): number
 function calculateArea(shape: 'square', side: number): number
 function calculateArea(
@@ -69,9 +62,6 @@ function calculateArea(
 
 const circleArea = calculateArea('circle', 10)
 const squareArea = calculateArea('square', 5)
-
-console.log("circle: " + circleArea);
-console.log("square: " + squareArea);
 
 type Status = 'active' | 'inactive' | 'new'
 
@@ -89,9 +79,6 @@ function getStatusColor(status: Status): string {
 const color1 = getStatusColor('active');
 const color2 = getStatusColor('new');
 
-console.log("color1: " + color1);
-console.log("color2: " + color2);
-
 type StringFormatter = (value: string, uppercase?: boolean) => string
 
 const capitalizeFirst: StringFormatter = (value) => {
@@ -104,10 +91,6 @@ const trimAndFormat: StringFormatter = (value, uppercase = false) => {
   return uppercase ? trimmed.toUpperCase() : trimmed
 }
 
-console.log("format 1: " + capitalizeFirst("typescript"))
-console.log("format 2: " + trimAndFormat("  hello world  "))
-console.log("format 3: " + trimAndFormat("  hello world  ", true))
-
 //генерик
 function getFirstElement<T>(arr: T[]): T | undefined {
   return arr[0]
@@ -115,11 +98,6 @@ function getFirstElement<T>(arr: T[]): T | undefined {
 
 const numbers = [1, 2, 3]
 const strings = ["a", "b", "c"]
-
-console.log(getFirstElement(numbers));
-console.log(getFirstElement(strings))
-console.log(getFirstElement([]));
-
 
 //поиск юзера по айди
 interface HasId {
@@ -139,8 +117,6 @@ const users = [
 ]
 
 const foundUser = findById(users, 2)
-
-console.log("find by id user: " + foundUser);
 
 export {
   createBook,

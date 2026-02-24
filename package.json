@@ -1,0 +1,25 @@
+{
+  "name": "vizprog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maydeixxx/vizProg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maydeixxx/vizProg/issues"
+  },
+  "homepage": "https://github.com/maydeixxx/vizProg#readme",
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "vitest": "^4.0.18"
+  }
+}
